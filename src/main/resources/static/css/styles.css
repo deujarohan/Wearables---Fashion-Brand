@@ -1,0 +1,361 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --gold: #d4af37;
+    --beige: #f8f5f0;
+    --ink: #1d1d1d;
+    --muted: #6f6a60;
+    --line: #e7dfd1;
+    --max-width: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--white);
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid var(--line);
+}
+
+.navbar {
+    width: min(100%, var(--max-width));
+    min-height: 72px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.brand {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    transition: color 180ms ease;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+    background: var(--white);
+    padding: 10px;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 2px;
+    margin: 5px 0;
+    background: var(--black);
+}
+
+.hero {
+    min-height: 720px;
+    display: grid;
+    align-items: end;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.72)),
+        url("https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1800&q=80") center/cover;
+}
+
+.hero-overlay {
+    width: min(100%, var(--max-width));
+    margin: 0 auto;
+    padding: 160px 24px 84px;
+    color: var(--white);
+}
+
+.eyebrow {
+    margin: 0 0 12px;
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    line-height: 1.05;
+    letter-spacing: 0;
+}
+
+h1 {
+    max-width: 760px;
+    font-size: clamp(4rem, 10vw, 8.5rem);
+}
+
+h2 {
+    max-width: 760px;
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+}
+
+h3 {
+    font-size: 1.7rem;
+}
+
+.hero-copy {
+    max-width: 620px;
+    margin: 22px 0 30px;
+    font-size: 1.1rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 22px;
+    border: 1px solid transparent;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-gold {
+    color: var(--black);
+    background: var(--gold);
+}
+
+.button-dark {
+    color: var(--white);
+    background: var(--black);
+}
+
+.section {
+    padding: 86px 24px;
+    background: var(--white);
+}
+
+.section-light {
+    background: var(--beige);
+}
+
+.section-inner,
+.split-layout,
+.newsletter-section,
+.site-footer {
+    width: min(100%, var(--max-width));
+    margin: 0 auto;
+}
+
+.collection-grid,
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.collection-card,
+.article-card {
+    border: 1px solid var(--line);
+    background: var(--white);
+    padding: 24px;
+}
+
+.collection-image {
+    aspect-ratio: 4 / 5;
+    margin: -24px -24px 22px;
+    background: linear-gradient(135deg, #0f0f0f, #d4af37 48%, #f8f5f0);
+}
+
+.collection-card p,
+.article-card p,
+.about-copy p,
+.site-footer p {
+    color: var(--muted);
+}
+
+.article-tag {
+    color: var(--gold);
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.article-card a {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: 800;
+    border-bottom: 2px solid var(--gold);
+}
+
+.newsletter-section {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 36px;
+    align-items: center;
+    padding: 72px 24px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.newsletter-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    width: 100%;
+    min-height: 48px;
+    border: 1px solid var(--line);
+    padding: 0 14px;
+    font: inherit;
+}
+
+input:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+}
+
+.message {
+    margin: 10px 0 0;
+    font-weight: 700;
+}
+
+.success {
+    color: #1f7a3f;
+}
+
+.error {
+    color: #a51f1f;
+}
+
+.split-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 42px;
+}
+
+.contact-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 30px;
+    align-items: center;
+}
+
+address {
+    font-style: normal;
+    color: var(--muted);
+}
+
+.social-links,
+.footer-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-weight: 800;
+}
+
+.site-footer {
+    padding: 40px 24px;
+    display: grid;
+    grid-template-columns: 1fr auto minmax(260px, 360px);
+    gap: 28px;
+    align-items: center;
+}
+
+.footer-form {
+    display: flex;
+}
+
+.footer-form button {
+    min-width: 72px;
+    border: 0;
+    color: var(--white);
+    background: var(--black);
+    font-weight: 800;
+}
+
+@media (max-width: 860px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 72px;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px 24px;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 620px;
+    }
+
+    .collection-grid,
+    .article-grid,
+    .newsletter-section,
+    .split-layout,
+    .contact-panel,
+    .site-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row,
+    .footer-form {
+        flex-direction: column;
+    }
+}
